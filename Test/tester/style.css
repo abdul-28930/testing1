@@ -1,0 +1,177 @@
+/* Basic reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background video */
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Card container */
+.card {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #4C3BCF, #3DC2EC);
+    width: 90%;
+    max-width: 470px;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Search box styles */
+.search-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search-box button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button img {
+    width: 24px; /* Adjust the size of the search icon */
+}
+
+/* Weather icon */
+.weather-icon {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* Temperature and city name */
+.weather h1 {
+    font-size: 60px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.weather h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+/* Weather details (humidity and wind speed) */
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Change this to distribute space evenly */
+    margin-top: 30px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 10px; /* Adjust spacing between icon and text */
+}
+
+.col img {
+    width: 30px; /* Adjust size of detail icons */
+}
+
+.humidity, .wind {
+    font-size: 20px; /* Adjust font size */
+    margin-top: -6px;
+}
+
+/* Error message styles */
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
